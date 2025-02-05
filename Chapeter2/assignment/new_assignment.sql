@@ -47,10 +47,15 @@ LIMIT 1;
 -- FROM Rides
 
 
+select Rides.RideID, Riders.Name, Drivers.Rating as AverageRating
+from Riders
+join Rides on Riders.RiderID = Rides.RiderID
+join Drivers on Rides.DriverID = Drivers.DriverID
+where Drivers.Rating < 3;
 
+-- 7) Find riders in Lagos who rated their drivers less than 3 on average
 
-
--- 7) Find rides where the fare is more than 50% higher or lower than the average fareridersRiderIDriders
+-- 8) Find rides where the fare is more than 50% higher or lower than the average fareridersRiderIDriders
 
 
 
